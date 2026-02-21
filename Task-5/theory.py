@@ -21,7 +21,7 @@ def convert(num, sys):  # num = 20, sys = 2
     while num:  # while работает только с True и False, False - 0, True - 1, while работает только с True
         res += str(num % sys)
         num //= sys
-    return res[::-1]
+    return res[::-1] if res else '0'
 
 
 print(convert(20, 2))
@@ -35,7 +35,7 @@ def convert(num, sys):  # num = 20, sys = 2
     while num:  # while работает только с True и False, False - 0, True - 1, while работает только с True
         res += printable[num % sys]
         num //= sys
-    return res[::-1]
+    return res[::-1] if res else '0'
 
 
 print(convert(20, 2))
